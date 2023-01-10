@@ -14,9 +14,11 @@ const HeroBanner = ({ heroBanner }) => {
                     <img src={urlFor(heroBanner.image)} alt="nike-shoes" className=' absolute max-md:right-0 top-0 max-md:top-24 max-md:w-[400px] max-md:h-[350px] w-[600px] h-[500px] right-[10%]' />
                 </div>
                 <div>
+                    <div className="max-md:pt-[7.5rem]">
                     <Link href='/product/nike-infinity-pro-2'>
-                        <button type='button' className='max-md:relative max-md:top-28'>{heroBanner.buttonText}</button>
+                            <button type='button' className=' max-md:top-28'>{heroBanner.buttonText}</button>
                     </Link>
+                    </div>
                     <div className='desc'>
                         <h5>{heroBanner.discount}</h5>
                         <p>{heroBanner.desc}</p>
