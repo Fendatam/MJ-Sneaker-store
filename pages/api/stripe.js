@@ -1,6 +1,6 @@
 import Stripe from 'stripe';
 
-const stripe = new Stripe(`${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`);
+const stripe = new Stripe('sk_test_51MO7x4L1vONArxWENTCEah62k3gg6Axr4UWrPqzngZm2T8PbeG1auRlJ4lGZKCB57P3TGLjf58BOHq8XnNE1osSk0098UyKtE1');
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
@@ -41,7 +41,6 @@ export default async function handler(req, res) {
             const session = await stripe.checkout.sessions.create(params);
 
             res.status(200).json(session);
-            res.redirect('/');
         } catch (err) {
             res.status(err.statusCode || 500).json(err.message);
         }

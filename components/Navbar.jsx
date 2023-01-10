@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div className='flex justify-between py-4'>
             <div className=''>
-                <Link href="/" ><img src='mjm.png' alt='koko' className=' h-[50px] cursor-pointer' /></Link>
+                <Link href="/"><h1 className=' font-semibold text-2xl'>MJ</h1></Link>
             </div>
             <button type='button' className='cart-icon' onClick={() => setShowCart(true)}>
                 <AiOutlineShopping />
